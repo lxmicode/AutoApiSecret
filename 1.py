@@ -32,6 +32,7 @@ def gettoken(refresh_token):
         f.write(refresh_token)
     return access_token
 def main():
+    print(path)
     fo = open(path, "r+")
     refresh_token = fo.read()
     fo.close()
