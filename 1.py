@@ -32,10 +32,11 @@ def gettoken(refresh_token):
         f.write(refresh_token)
     return access_token
 def main():
-    print(path)
+    print("path: " + path)
     fo = open(path, "r+")
     refresh_token = fo.read()
     fo.close()
+     print("refresh_token : "+refresh_token)
     global num1
     localtime = time.asctime( time.localtime(time.time()) )
     access_token=gettoken(refresh_token)
